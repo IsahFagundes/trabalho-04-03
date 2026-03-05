@@ -1,0 +1,113 @@
+.body{
+    display: grid;
+    grid-template-areas: 
+        "header header"
+        "aside main"
+        "footer footer"
+    ;
+    grid-template-rows: 180px 1000px 180px;
+    grid-template-columns: 1fr 4fr;
+}
+
+.header{
+    grid-area: header;
+    background-color: rgb(255, 151, 210);
+}
+
+.main{
+    grid-area: main;
+    background-color: rgb(255, 175, 226);
+}
+
+.aside{
+    grid-area: aside;
+    background-color: rgb(255, 175, 226);
+}
+
+.footer{
+    grid-area: footer;
+    background-color:rgb(255, 151, 210);
+}
+
+@media only screen and (max-width: 850px) {
+        .body{
+            display: grid;
+            grid-template-areas: 
+                "header"
+                "aside"
+                "main"
+                "footer"
+        ;
+        grid-template-rows: 250px 100px 320px 270px;
+        grid-template-columns: auto;
+    }
+
+}
+
+@media only screen and (max-width: 450px) {
+        .body{
+            display: grid;
+            grid-template-areas: 
+                "header"
+                "aside"
+                "main"
+                "footer"
+        ;
+        grid-template-rows: 300px 0px 350px 290px;
+        grid-template-columns: auto;
+        
+        font-size: small;
+    }
+
+    aside{
+        display: none;
+    }
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px;
+    align-items: center;
+    border: rgb(255, 255, 255) 2px solid;
+    background-color: rgb(255, 197, 241);
+    width: 350px;
+    height:400px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px;
+}
+
+.imagem_produto{
+    width: 200px;
+    height:250px;
+}
+.imagem_produto1{
+    width: 200px;
+    height:250px;
+}
+.imagem_produto2{
+    width: 200px;
+    height:250px;
+}
+
+.d_produto{
+    color: rgb(3, 3, 3);
+    font-size: xx-large;
+}
+
+.p_produto{
+    color: rgb(0, 0, 0);
+    font-size: 40px;
+}
+
+
+.mae{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+
