@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfume BLEU DE CHANEL</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #124d84f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Card do produto */
+        .produto-card {
+            background-color: #eae1b9c6;
+            border-radius: 15px;
+            
+            padding: 30px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .produto-card img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .produto-card h1 {
+            color: #0D3B66;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .produto-card p.preco {
+            font-size: 24px;
+            font-weight: bold;
+            color: #124d84f4;
+            margin-bottom: 15px;
+        }
+
+        .produto-card p.descricao {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 25px;
+        }
+
+        .produto-card .botoes {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .produto-card button {
+            background-color: #0D3B66;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .produto-card button:hover {
+            background-color: #124d84;
+        }
+
+        /* Avaliação em estrelas */
+        .avaliacao {
+            margin-bottom: 15px;
+            font-size: 20px;
+            color: #ffcc00;
+        }
+
+        /* Responsividade */
+        @media (max-width: 450px) {
+            .produto-card {
+                padding: 20px;
+            }
+
+            .produto-card h1 {
+                font-size: 24px;
+            }
+
+            .produto-card p.preco {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="produto-card">
+        <img src="img/perfumeM1.jpg" alt="Perfume BLEU DE CHANEL">
+        <h1>BLEU DE CHANEL</h1>
+
+        <div class="avaliacao">
+            ★★★★☆ 
+        </div>
+
+        <p class="preco">R$560,00</p>
+
+        <p class="descricao">
+            Perfume masculino sofisticado e elegante. Possui notas amadeiradas, cítricas e aromáticas, garantindo uma fragrância marcante que dura o dia todo.
+        </p>
+
+        <div class="botoes">
+            <button onclick="alert('Produto adicionado ao carrinho!')">Comprar</button>
+            <a href="index.html"><button>Voltar à Loja</button></a>
+        </div>
+    </div>
+
+</body>
+</html>

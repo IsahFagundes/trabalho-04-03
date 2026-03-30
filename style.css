@@ -1,6 +1,6 @@
 .body{
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:      /* organização das colunas*/
         "header header"
         "aside main"
         "footer footer";
@@ -105,7 +105,7 @@ button{
     gap: 20px;
 }
 
-.secao{
+.secao{                               /* caixas subtitulos*/
     background-color: #0f4271db;
     padding: 1px;
     margin: 20px 0;
@@ -115,5 +115,12 @@ button{
 }
 
 .secao h2{
-    color: #FAF0CA;
+    color: #FAF0CA;   /* cor do subtitulos*/
+}
+
+/* Remove margens e padding padrão do navegador */
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
