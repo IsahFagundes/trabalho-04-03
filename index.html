@@ -7,16 +7,35 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
+        <div id="popup" class="popup">
+        <div class="popup-conteudo">
+        <span class="fechar" onclick="fecharCadastro()">&times;</span>
+
+        <h2>Cadastro</h2>
+
+        <form>
+            <label>Nome:</label>
+            <input type="text" placeholder="Digite seu nome" required>
+            <br>
+            <label>Telefone:</label>
+            <input type="tel" placeholder="Digite seu telefone" required>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+        </div>
+        </div>
+
 <body class="body">
     <header class="header">
-        <h1>primeiro</h1>
+        <img src="img/cadas.png" class="btn-cadastro" onclick="abrirCadastro()">
     </header>
 
     <main class="main">
-        <div class="secao">
-           <h2>Perfumes Masculinos</h2>
-        </div>
-        
+
+    <div class="secao">
+        <h2>Perfumes Masculinos</h2>
+    </div>
+    
         <div class="mae">
 
         <div class="card">

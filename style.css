@@ -124,3 +124,72 @@ html, body {
     padding: 0;
     box-sizing: border-box;
 }
+
+
+
+.btn-cadastro {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #0D3B66;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-cadastro:hover {
+    background-color: #0D3B66;
+}
+
+/* Fundo escuro */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0,0,0,0.5);
+}
+
+/* Caixa branca */
+.popup-conteudo {
+    background-color: white;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* X de fechar */
+.fechar {
+    float: right;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.btn-cadastro {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%; /* deixa redondo */
+    object-fit: cover;  /* encaixa a imagem certinho */
+
+    cursor: pointer;
+    border: 2px solid white;
+}
+.btn-cadastro:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
