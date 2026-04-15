@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Carrinho</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #0D3B66;
+}
+
+/* CAIXA CENTRAL */
+.container {
+    max-width: 850px;
+    margin: 40px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+/* TÍTULO */
+h2 {
+    text-align: center;
+    color: #0D3B66;
+}
+
+/* LISTA DO CARRINHO */
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f3f3f3;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border-left: 5px solid #0D3B66;
+}
+
+/* BOTÃO REMOVER */
+.remover {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.remover:hover {
+    background: #c0392b;
+}
+
+/* BOTÃO FINALIZAR */
+.finalizar {
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px;
+    background: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.finalizar:hover {
+    background: #1e8449;
+}
+
+/* BOTÃO CANCELAR */
+.cancelar {
+    width: 100%;
+    margin-top: 10px;
+    padding: 14px;
+    background: #7f8c8d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.cancelar:hover {
+    background: #5f6a6a;
+}
+
+/* VAZIO */
+.vazio {
+    text-align: center;
+    color: gray;
+    padding: 20px;
+}
+.voltar-loja {
+    width: 100%;
+    margin-top: 10px;
+    padding: 14px;
+    background: #0D3B66;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.voltar-loja:hover {
+    background: #092c4d;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>🛒 Seu Carrinho</h2>
+
+    <div id="lista"></div>
+
+    <button class="finalizar" onclick="finalizarCompra()">
+        Finalizar Compra
+    </button>
+
+    <button class="cancelar" onclick="cancelarCarrinho()">
+        Cancelar Carrinho
+    </button>
+
+    <a href="index.html">
+    <button class="voltar-loja">← Voltar à loja</button>
+    </a>
+
+</div>
+
+<script>
+let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+function renderizar() {
+    let html = "";
+
+    if (carrinho.length === 0) {
+        html = "<p class='vazio'>Seu carrinho está vazio 🛒</p>";
+    } else {
+
+        carrinho.forEach((item, index) => {
+            html += `
+            <div class="item">
+                <div>
+                    <strong>${item.nome}</strong><br>
+                    R$ ${item.preco}
+                </div>
+
+                <button class="remover" onclick="removerItem(${index})">
+                    Remover
+                </button>
+            </div>
+            `;
+        });
+
+    }
+
+    document.getElementById("lista").innerHTML = html;
+}
+
+function removerItem(index) {
+    carrinho.splice(index, 1);
+    localStorage.setItem("carrinho", JSON.stringify(carrinho));
+    renderizar();
+}
+
+function cancelarCarrinho() {
+    carrinho = [];
+    localStorage.removeItem("carrinho");
+    renderizar();
+    alert("Carrinho cancelado!");
+}
+
+function finalizarCompra() {
+    if (carrinho.length === 0) {
+        alert("Seu carrinho está vazio!");
+        return;
+    }
+
+    carrinho = [];
+    localStorage.removeItem("carrinho");
+    renderizar();
+
+    alert("Compra finalizada com sucesso! 🎉");
+}
+
+renderizar();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Produto</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #0D3B66;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            display: flex;
+            gap: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .imagem {
+            flex: 1;
+        }
+
+        .imagem img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .info {
+            flex: 1;
+        }
+
+        h2 {
+            color: #0D3B66;
+        }
+
+        .preco {
+            font-size: 22px;
+            color: green;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .bio {
+            margin-top: 15px;
+            font-size: 15px;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        button {
+            margin-top: 20px;
+            background: #0D3B66;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #092c4d;
+        }
+
+        .voltar {
+            display: block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #0D3B66;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="imagem">
+        <img id="imgProduto">
+    </div>
+
+    <div class="info">
+        <h2 id="nomeProduto"></h2>
+
+        <p class="preco" id="precoProduto"></p>
+
+        <p class="bio" id="bioProduto"></p>
+
+        <!-- BOTÃO CORRETO (SÓ UM) -->
+        <button onclick="adicionarCarrinho()">Adicionar ao Carrinho</button>
+
+        <a class="voltar" href="index.html">← Voltar</a>
+    </div>
+
+</div>
+
+<script src="produtos.js"></script>
+
+<script>
+let produtoAtual;
+
+function carregarProduto() {
+    let id = localStorage.getItem("produtoId");
+
+    produtoAtual = produtos.find(p => p.id == id);
+
+    document.getElementById("imgProduto").src = produtoAtual.imagem;
+    document.getElementById("nomeProduto").innerText = produtoAtual.nome;
+    document.getElementById("precoProduto").innerText = "R$ " + produtoAtual.preco;
+    document.getElementById("bioProduto").innerText = produtoAtual.bio;
+}
+
+function adicionarCarrinho() {
+    let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+    carrinho.push(produtoAtual);
+
+    localStorage.setItem("carrinho", JSON.stringify(carrinho));
+
+    alert("Produto adicionado ao carrinho!");
+}
+
+carregarProduto();
+</script>
+
+</body>
+</html>

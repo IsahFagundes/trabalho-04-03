@@ -115,10 +115,9 @@ button{
 }
 
 .secao h2{
-    color: #FAF0CA;   /* cor do subtitulos*/
+    color: #FAF0CA;   
 }
 
-/* Remove margens e padding padrão do navegador */
 html, body {
     margin: 0;
     padding: 0;
@@ -143,8 +142,7 @@ html, body {
     background-color: #0D3B66;
 }
 
-/* Fundo escuro */
-.popup {
+.popup {  /* sobre o fundo d qnd cadastrar */
     display: none;
     position: fixed;
     top: 0;
@@ -155,20 +153,15 @@ html, body {
     background-color: rgba(0,0,0,0.5);
 }
 
-/* Caixa branca */
 .popup-conteudo {
-    background-color: white;
+    background-color: #FAF0CA;
     width: 300px;
     padding: 20px;
+    color: #092c4d;
     border-radius: 10px;
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: 100px auto; 
 }
 
-/* X de fechar */
 .fechar {
     float: right;
     font-size: 25px;
@@ -179,17 +172,80 @@ html, body {
     position: absolute;
     top: 15px;
     left: 15px;
-
     width: 50px;
     height: 50px;
-
-    border-radius: 50%; /* deixa redondo */
-    object-fit: cover;  /* encaixa a imagem certinho */
-
+    border-radius: 50%; 
     cursor: pointer;
     border: 2px solid white;
 }
 .btn-cadastro:hover {
     transform: scale(1.1);
     transition: 0.3s;
+}
+
+.cadastro-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #0D3B66;
+    font-family: Arial, sans-serif;
+}
+
+.cadastro-container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.cadastro-container h2 {
+    margin-bottom: 20px;
+    color: #0D3B66;
+}
+
+.input-box {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.input-box label {
+    font-size: 14px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-box input:focus {
+    border-color: #0D3B66;
+    outline: none;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    background: #0D3B66;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #092c4d;
+}
+
+.voltar {
+    display: block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #0D3B66;
+    font-size: 14px;
 }

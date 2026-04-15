@@ -6,28 +6,12 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
-        <div id="popup" class="popup">
-        <div class="popup-conteudo">
-        <span class="fechar" onclick="fecharCadastro()">&times;</span>
-
-        <h2>Cadastro</h2>
-
-        <form>
-            <label>Nome:</label>
-            <input type="text" placeholder="Digite seu nome" required>
-            <br>
-            <label>Telefone:</label>
-            <input type="tel" placeholder="Digite seu telefone" required>
-
-            <button type="submit">Cadastrar</button>
-        </form>
-        </div>
-        </div>
-
+   
 <body class="body">
     <header class="header">
-        <img src="img/cadas.png" class="btn-cadastro" onclick="abrirCadastro()">
+       <a href="cadastro.html">
+       <img src="img/cadas.png" class="btn-cadastro">
+       </a> 
     </header>
 
     <main class="main">
@@ -42,84 +26,42 @@
             <img src="img/perfumeM1.jpg" class="imagem_produto" alt="">
             <p class="d_produto">Perfume- BLEU DE CHANEL</p>
             <p class="p_produto">R$560,00</p>
-            <a href="produto1.html"><button>Comprar</button></a>
+            <button onclick="verProduto(1)">Comprar</button>
         </div>
 
         <div class="card">
             <img src="img/perfumeM2.jpg" class="imagem_produto" alt="">
             <p class="d_produto">Perfume- SAUVAGE DIOR</p>
             <p class="p_produto">R$473,20</p>
-            <button>Comprar</button>
+            <button onclick="verProduto(2)">Comprar</button>
         </div>
 
         <div class="card">
             <img src="img/perfumeM3.jpg" class="imagem_produto" alt="">
             <p class="d_produto">Perfume- GIORGIO ARMANI</p>
             <p class="p_produto">R$384,98</p>
-            <button>Comprar</button>
+            <button onclick="verProduto(3)">Comprar</button>
         </div>
 
         <div class="card">
             <img src="img/perfumeM4.jpg" class="imagem_produto" alt="">
             <p class="d_produto">Perfume- DOLCE E CABBANA</p>
             <p class="p_produto">R$788,00</p>
-            <button>Comprar</button>
+            <button onclick="verProduto(4)">Comprar</button>
         </div>
 
         <div class="card">
             <img src="img/perfumeM5.jpg" class="imagem_produto" alt="">
             <p class="d_produto">Perfume- GAULTIER</p>
             <p class="p_produto">R$827,10</p>
-            <button>Comprar</button>
+            <button onclick="verProduto(5)">Comprar</button>
         </div>
         
          <div class="card">
             <img src="img/perfumeM6.jpg" class="imagem_produto" alt="">
             <p class="d_produto">Perfume- GAULTIER</p>
             <p class="p_produto">R$827,10</p>
-            <button>Comprar</button>
-        </div>
-
-         <div class="card">
-            <img src="img/perfumeM7.jpg" class="imagem_produto" alt="">
-            <p class="d_produto">Perfume- GAULTIER</p>
-            <p class="p_produto">R$827,10</p>
-            <button>Comprar</button>
-        </div>
-
-         <div class="card">
-            <img src="img/perfumeM8.jpg" class="imagem_produto" alt="">
-            <p class="d_produto">Perfume- GAULTIER</p>
-            <p class="p_produto">R$827,10</p>
-            <button>Comprar</button>
-        </div>
-
-         <div class="card">
-            <img src="img/perfumeM9.jpg" class="imagem_produto" alt="">
-            <p class="d_produto">Perfume- GAULTIER</p>
-            <p class="p_produto">R$827,10</p>
-            <button>Comprar</button>
-        </div>
-
-         <div class="card">
-            <img src="img/perfumeM10.jpg" class="imagem_produto" alt="">
-            <p class="d_produto">Perfume- GAULTIER</p>
-            <p class="p_produto">R$827,10</p>
-            <button>Comprar</button>
-        </div>
-
-        <div class="card">
-            <img src="img/perfumeM11.jpg" class="imagem_produto" alt="">
-            <p class="d_produto">Perfume- GIORGIO ARMANI</p>
-            <p class="p_produto">R$468,93</p>
-            <button>Comprar</button>
-        </div>
-
-        <div class="card">
-            <img src="img/perfumeM12.jpg" class="imagem_produto" alt="">
-            <p class="d_produto">Perfume- DOLCE E CABBANA</p>
-            <p class="p_produto">R$246,30</p>
-            <button>Comprar</button>
+            <button onclick="verProduto(6)">Comprar</button>
         </div>
         </div>
 
@@ -132,97 +74,64 @@
             <img src="img/perfume.jpg" class="imagem_produto" alt="">
             <p class="d_produto">Perfume- MISS DIOR</p>
             <p class="p_produto">R$639,00</p>
-            <button>Comprar</button>
+            <button onclick="verProduto(7)">Comprar</button>
         </div>
 
         <div class="card">
             <img src="img/perfume1.jpg" class="imagem_produto" alt="">
             <p class="d_produto">Perfume- COCO CHANEL</p>
             <p class="p_produto">R$815,00</p> 
-            <button>Comprar</button>
+            <button onclick="verProduto(8)">Comprar</button>
         </div>
 
         <div class="card">
             <img src="img/perfume2.jpg" class="imagem_produto" alt="">
             <p class="d_produto">Perfume- CAROLINA HERRERA</p>
             <p class="p_produto">R$545,00</p>
-            <button>Comprar</button>
+            <button onclick="verProduto(9)">Comprar</button>
         </div>
 
          <div class="card">
             <img src="img/perfume3.jpg" class="imagem_produto" alt="">
             <p class="d_produto">Perfume- CHANCE CHANEL</p>
             <p class="p_produto">R$937,50</p>
-            <button>Comprar</button>
+            <button onclick="verProduto(10)">Comprar</button>
         </div>
 
         <div class="card">
             <img src="img/perfume5.jpg" class="imagem_produto" alt="">
             <p class="d_produto">Perfume- KAY ALI</p>
             <p class="p_produto">R$259,00</p>
-            <button>Comprar</button>
+            <button onclick="verProduto(11)">Comprar</button>
         </div>
 
         <div class="card">
             <img src="img/perfume6.jpg" class="imagem_produto" alt="">
             <p class="d_produto">Perfume- KAY ALI</p>
             <p class="p_produto">R$325,10</p>
-            <button>Comprar</button>
+            <button onclick="verProduto(12)">Comprar</button>
+            
         </div>
 
-        <div class="card">
-            <img src="img/perfume7.jpg" class="imagem_produto" alt="">
-            <p class="d_produto">Perfume- KAY ALI</p>
-            <p class="p_produto">R$259,00</p>
-            <button>Comprar</button>
-        </div>
-
-        <div class="card">
-            <img src="img/perfume8.jpg" class="imagem_produto" alt="">
-            <p class="d_produto">Perfume- PHLUR AMÉLINE</p>
-            <p class="p_produto">R$320,00</p>
-            <button>Comprar</button>
-        </div>
-
-        <div class="card">
-            <img src="img/perfume9.jpg" class="imagem_produto" alt="">
-            <p class="d_produto">Perfume- LOVER LETTER</p>
-            <p class="p_produto">R$297,48</p>
-            <button>Comprar</button>
-        </div>
-
-        <div class="card">
-            <img src="img/perfume10.jpg" class="imagem_produto" alt="">
-            <p class="d_produto">Perfume- BLOODY VALENTINE</p>
-            <p class="p_produto">R$78,90</p>
-            <button>Comprar</button>
-        </div>
-
-         <div class="card">
-            <img src="img/perfume11.jpg" class="imagem_produto" alt="">
-            <p class="d_produto">Perfume- VICTORIA'S SECRET</p>
-            <p class="p_produto">R$475,95</p>
-            <button>Comprar</button>
-        </div>
-
-        <div class="card">
-            <img src="img/perfume12.jpg" class="imagem_produto" alt="">
-            <p class="d_produto">Perfume- VS BOMBSHELL</p>
-            <p class="p_produto">R$477,58</p>
-            <button>Comprar</button>
-        </div>
         </div>
     </main>
 
     <aside class="aside">
-        <h1>terceiro</h1>
+        <br>
+         <a href="carrinho.html" >Carrinho</a>
     </aside>
 
     <footer class="footer">
         <p>© 2026 Loja de Perfumes</p>
     </footer>
+ <script src="produtos.js"></script>
 
- 
+<script>
+function verProduto(id) {
+    localStorage.setItem("produtoId", id);
+    window.location.href = "produto.html";
+}
+</script>
     
 
     <script src="script.js"></script>
