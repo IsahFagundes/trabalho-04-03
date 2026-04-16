@@ -12,7 +12,6 @@ body {
     background: #0D3B66;
 }
 
-/* CAIXA CENTRAL */
 .container {
     max-width: 850px;
     margin: 40px auto;
@@ -21,13 +20,11 @@ body {
     border-radius: 12px;
 }
 
-/* TÍTULO */
 h2 {
     text-align: center;
     color: #0D3B66;
 }
 
-/* LISTA DO CARRINHO */
 .item {
     display: flex;
     justify-content: space-between;
@@ -39,7 +36,6 @@ h2 {
     border-left: 5px solid #0D3B66;
 }
 
-/* BOTÃO REMOVER */
 .remover {
     background: #e74c3c;
     color: white;
@@ -53,7 +49,6 @@ h2 {
     background: #c0392b;
 }
 
-/* BOTÃO FINALIZAR */
 .finalizar {
     width: 100%;
     margin-top: 20px;
@@ -70,7 +65,6 @@ h2 {
     background: #1e8449;
 }
 
-/* BOTÃO CANCELAR */
 .cancelar {
     width: 100%;
     margin-top: 10px;
@@ -86,12 +80,7 @@ h2 {
     background: #5f6a6a;
 }
 
-/* VAZIO */
-.vazio {
-    text-align: center;
-    color: gray;
-    padding: 20px;
-}
+
 .voltar-loja {
     width: 100%;
     margin-top: 10px;
@@ -136,12 +125,7 @@ h2 {
 let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 
 function renderizar() {
-    let html = "";
-
-    if (carrinho.length === 0) {
-        html = "<p class='vazio'>Seu carrinho está vazio 🛒</p>";
-    } else {
-
+    let html = ""; {
         carrinho.forEach((item, index) => {
             html += `
             <div class="item">
@@ -176,16 +160,12 @@ function cancelarCarrinho() {
 }
 
 function finalizarCompra() {
-    if (carrinho.length === 0) {
-        alert("Seu carrinho está vazio!");
-        return;
-    }
 
     carrinho = [];
     localStorage.removeItem("carrinho");
     renderizar();
 
-    alert("Compra finalizada com sucesso! 🎉");
+    alert("Compra finalizada!");
 }
 
 renderizar();

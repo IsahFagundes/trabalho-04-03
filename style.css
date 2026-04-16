@@ -19,7 +19,7 @@
 
 .aside{
     grid-area: aside;
-    background-color: #FAF0CA;
+    background-color: #ece1b5;
 }
 
 .footer{
@@ -118,49 +118,13 @@ button{
     color: #FAF0CA;   
 }
 
-html, body {
+html, body {    /* dxa a tela cheia*/
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 
-
-.btn-cadastro {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background-color: #0D3B66;
-    color: rgb(255, 255, 255);
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.btn-cadastro:hover {
-    background-color: #0D3B66;
-}
-
-.popup {  /* sobre o fundo d qnd cadastrar */
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-    background-color: rgba(0,0,0,0.5);
-}
-
-.popup-conteudo {
-    background-color: #FAF0CA;
-    width: 300px;
-    padding: 20px;
-    color: #092c4d;
-    border-radius: 10px;
-    margin: 100px auto; 
-}
 
 .fechar {
     float: right;
@@ -238,14 +202,32 @@ html, body {
     cursor: pointer;
 }
 
-.btn:hover {
+.btn:hover {                  /*dxa escuro o btn*/
     background: #092c4d;
 }
 
 .voltar {
     display: block;
-    margin-top: 15px;
+    margin-top: 15px;         /* espaço entr as margins*/
     text-decoration: none;
-    color: #0D3B66;
-    font-size: 14px;
+    color: #0D3B66;        /* cor texto*/
+    font-size: 14px;         /*tamannho plvra*/
+}
+.botao{
+    display: inline-block;
+    padding: 6px 15px;
+    margin-left: 12px;
+    background-color: #0D3B66;
+    border-radius: 5px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: #FAF0CA;
+    font-weight: bold;
+    cursor: pointer;
+}
+.linkp{                      /*n dx azul*/
+    text-decoration: none;
+    color: #FAF0CA;
+    display: contents;
 }

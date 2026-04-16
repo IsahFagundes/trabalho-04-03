@@ -1,5 +1,13 @@
+function abrirCadastro() {
+    document.getElementById("popup").style.display = "block";
+}
+
+function fecharCadastro() {
+    document.getElementById("popup").style.display = "none";
+}
+
 const produtos = [
-    //  MASCULINOS 
+    //  masc
     {
         id: 1,
         nome: "BLEU DE CHANEL",
@@ -44,7 +52,7 @@ const produtos = [
 
     },
 
-    //  FEMININOS 
+    //  femn
     {
         id: 7,
         nome: "MISS DIOR",
